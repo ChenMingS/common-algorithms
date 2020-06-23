@@ -32,9 +32,9 @@ public class Swap {
         int a = 11;
         int b = 15;
         swap(11,15);
-        System.out.println();
-        a =  100 >>> 3;
-        System.out.println(a);
+    //    System.out.println();
+    //    a =  100 >>> 3;
+    //    System.out.println(a);
     }
 
 
@@ -51,9 +51,9 @@ public class Swap {
         // ^(亦或运算) ，针对二进制，相同的为0，不同的为1
         // a = a ^ b ^ b
         System.out.printf("a=%d, b=%d",a,b);
-        a = b ^ a;  // b ^ a
-        b = a ^ b;  // b ^ a ^ b
-        a = a ^ b;
+        a = b ^ a;  // a = b ^ a  （1式）
+        b = a ^ b;  // 原式 b = a ^ b  因（1式 a = b ^ a）即为 b = b ^ a ^ b = a （2式） 
+        a = a ^ b;  // 原式 a = a ^ b  因（1式 a = b ^ a 和2式 b = a）即为 a = b ^ a ^ a = b 
         System.out.printf("\na=%d, b=%d",a,b);
     }
 
